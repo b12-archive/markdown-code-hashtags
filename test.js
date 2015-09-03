@@ -3,10 +3,23 @@ const test = require('tape-catch');
 const hashtags = require('./module/index');
 
 test('Works with default options', (is) => {
-  const expected = 'Look! A [`#hashtag`](#hashtag)!';
-  const actual = hashtags('Look! A `#hashtag`!');
+  const actualSimple = hashtags('Look! A `#hashtag`!');
+  const expectedSimple = 'Look! A [`#hashtag`](#hashtag)!';
+  is.equal(actualSimple, expectedSimple,
+    'in a simple case'
+  );
 
-  is.equal(actual, expected);
+  const actualIncorrect = hashtags('Look! A `#hash tag`!');
+  const expectedIncorrect = 'Look! A `#hash tag`!';
+  is.equal(actualIncorrect, expectedIncorrect,
+    'ignoring the hashtag when there’s whitespace inside'
+  );
+
+  const actualTricky = hashtags('Look! A `#hash`#stuff`tag`!');
+  const expectedTricky = 'Look! A [`#hash`](#hash)#stuff`tag`!';
+  is.equal(actualTricky, expectedTricky,
+    'in a tricky case'
+  );
 
   is.end();
 });
