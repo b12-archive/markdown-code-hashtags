@@ -24,6 +24,8 @@ markdown-code-hashtags
 
 **Convert every [`#hashtag`](#hashtag) to a link.**
 
+Helpful when writing docs in markdown.
+
 
 
 
