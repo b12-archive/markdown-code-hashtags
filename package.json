@@ -37,7 +37,9 @@
     "/License.md"
   ],
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "markdown"
+  ],
   "author": "© 2015 Studio B12 GmbH  (http://studio-b12.de)",
   "contributors": [
     "Tomek Wiszniewski <t.wiszniewski@gmail.com>"
