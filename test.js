@@ -24,10 +24,49 @@ test('Works with default options', (is) => {
   is.end();
 });
 
-test.skip('Takes other hashes', (is) => {});
+test('Takes other hashes', (is) => {
+  const actual = hashtags.custom(
+    {hash: '@'},
+    'Look! A `@user`!'
+  );
 
-test.skip('Swallows the hash', (is) => {});
+  const expected = 'Look! A [`@user`](#user)!';
 
-test.skip('Uses a different URL base', (is) => {});
+  is.equal(actual, expected,
+    'in a simple case'
+  );
+
+  is.end();
+});
+
+test('Swallows the hash', (is) => {
+  const actual = hashtags.custom(
+    {swallow: true},
+    'Look! A nice `#link` in code!'
+  );
+
+  const expected = 'Look! A nice [`link`](#link) in code!';
+
+  is.equal(actual, expected,
+    'in a simple case'
+  );
+
+  is.end();
+});
+
+test('Takes a different URL base', (is) => {
+  const actual = hashtags.custom(
+    {urlBase: '/see/this/'},
+    'Look! This `#tag` points somewhere else!'
+  );
+
+  const expected = 'Look! This [`#tag`](/see/this/tag) points somewhere else!';
+
+  is.equal(actual, expected,
+    'in a simple case'
+  );
+
+  is.end();
+});
 
 test.skip('Fails gracefully', (is) => {});
