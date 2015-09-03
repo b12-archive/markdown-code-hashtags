@@ -12,7 +12,7 @@ const custom = ({
     `(${urlBase}$1)`
   );
 
-  return input.replace(search, replace);
+  return String(input).replace(search, replace);
 };
 
 const hashtags = (input) => custom({}, input);
