@@ -1,5 +1,5 @@
 {
-  "name": "markdown-code-links",
+  "name": "markdown-code-hashtags",
   "version": "0.0.0-work-in-progress",
   "description": "Auto convert certain `code` to links.",
   "dependencies": {},
@@ -38,7 +38,8 @@
   ],
   "license": "MIT",
   "keywords": [
-    "markdown"
+    "markdown",
+    "hashtag"
   ],
   "author": "© 2015 Studio B12 GmbH  (http://studio-b12.de)",
   "contributors": [
@@ -46,6 +47,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:studio-b12/markdown-code-links"
+    "url": "git@github.com:studio-b12/markdown-code-hashtags"
   }
 }
