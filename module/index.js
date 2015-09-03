@@ -3,7 +3,7 @@ const custom = ({
   swallow = false,
   urlBase = '#',
 }, input) => {
-  const search = new RegExp(`\`${hash}([^\\s]+)\``, 'g');
+  const search = new RegExp(`\`${hash}([^\\s]+?)\``, 'g');
   const replace = (
     '[`' +
       (swallow ? '' : hash) +
