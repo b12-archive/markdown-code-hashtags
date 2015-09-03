@@ -29,12 +29,12 @@ markdown-code-links
 
 <p align="center"><a
   title="Graphic by the great Justin Mezzell"
-  href="http://justinmezzell.tumblr.com/post/89957156723"
+  href="http://justinmezzell.tumblr.com/post/95370140878"
   >
   <br/>
   <br/>
   <img
-    src="Readme/….gif"
+    src="Readme/Scissors.gif"
     width="400"
     height="300"
   />
@@ -62,7 +62,19 @@ $ npm install markdown-code-links
 Usage
 -----
 
-*Work in progress…*
+```js
+const codeLinks = require('markdown-code-links');
+
+codeLinks(
+  'Look! A `#hashtag`!'
+);
+//» 'Look! A [`#hashtag`](#hashtag)!'
+
+codeLinks.custom({hash: '@', swallow: true},
+  'Got a different `@link` here.'
+);
+//» 'Got a different [`link`](#link) here.'
+```
 
 
 
