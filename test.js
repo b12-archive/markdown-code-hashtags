@@ -1,6 +1,15 @@
 const test = require('tape-catch');
 
-test.skip('Works with default options', (is) => {});
+const hashtags = require('./module/index');
+
+test('Works with default options', (is) => {
+  const expected = 'Look! A [`#hashtag`](#hashtag)!';
+  const actual = hashtags('Look! A `#hashtag`!');
+
+  is.equal(actual, expected);
+
+  is.end();
+});
 
 test.skip('Takes other hashes', (is) => {});
 
