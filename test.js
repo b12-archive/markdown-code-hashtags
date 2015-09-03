@@ -69,4 +69,40 @@ test('Takes a different URL base', (is) => {
   is.end();
 });
 
-test.skip('Fails gracefully', (is) => {});
+test('`hashtags`:  Fails gracefully', (is) => {
+  is.throws(
+    () => hashtags(),
+    /should be a `string`. got `undefined`/i,
+    'when called with no arguments'
+  );
+
+  is.throws(
+    () => hashtags({config: 'here'}),
+    /should be a `string`. got `object`/i,
+    'when `input` is no string'
+  );
+
+  is.end();
+});
+
+test('`hashtags.custom`:  Fails gracefully', (is) => {
+  is.throws(
+    () => hashtags.custom(),
+    /should be an `object`. got `undefined`/i,
+    'when called with no arguments'
+  );
+
+  is.throws(
+    () => hashtags.custom('a string'),
+    /should be an `object`. got `string`/i,
+    'when `options` are not an `object`'
+  );
+
+  is.throws(
+    () => hashtags.custom('a string', /not a string/),
+    /should be a `string`. got `object`/i,
+    'when `input` is no string'
+  );
+
+  is.end();
+});
