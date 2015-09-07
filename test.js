@@ -51,6 +51,32 @@ test('Takes other hashes', (is) => {
     'when the hash is a dot'
   );
 
+  const star = {
+    actual: hashtags.custom(
+      {hash: '*'},
+      'Look! A `*star`!'
+    ),
+
+    expected: 'Look! A [`*star`](#star)!',
+  };
+
+  is.equal(star.actual, star.expected,
+    'when the hash is a star'
+  );
+
+  const special = {
+    actual: hashtags.custom(
+      {hash: '\\d'},
+      'Look! A `\\donkey`!'
+    ),
+
+    expected: 'Look! A [`\\donkey`](#donkey)!',
+  };
+
+  is.equal(special.actual, special.expected,
+    'when the hash is a special RegExp sequence'
+  );
+
   is.end();
 });
 
