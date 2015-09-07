@@ -1,9 +1,11 @@
+const escape = require('escape-string-regexp');
+
 const custom = ({
   hash = '#',
   swallow = false,
   urlBase = '#',
 }, input) => {
-  const search = new RegExp(`\`${hash}([^\\s]+?)\``, 'g');
+  const search = new RegExp(`\`${escape(hash)}([^\\s]+?)\``, 'g');
   const replace = (
     '[`' +
       (swallow ? '' : hash) +
