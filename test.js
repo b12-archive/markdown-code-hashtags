@@ -70,7 +70,7 @@ test('Takes other hashes', (is) => {
       'Look! A `\\donkey`!'
     ),
 
-    expected: 'Look! A [`\\donkey`](#donkey)!',
+    expected: 'Look! A [`\\donkey`](#onkey)!',
   };
 
   is.equal(special.actual, special.expected,
