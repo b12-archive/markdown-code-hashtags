@@ -1,6 +1,6 @@
 {
   "name": "markdown-code-hashtags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert every `#hashtag` to a link.",
   "dependencies": {
     "escape-string-regexp": "^1.0.3"
