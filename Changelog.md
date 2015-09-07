@@ -1,3 +1,10 @@
+master
+======
+
+* It now works when the hash contains RegExp special characters.
+
+
+
 1.0.0
 =====
 
