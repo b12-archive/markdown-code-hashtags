@@ -25,15 +25,30 @@ test('Works with default options', (is) => {
 });
 
 test('Takes other hashes', (is) => {
-  const actual = hashtags.custom(
-    {hash: '@'},
-    'Look! A `@user`!'
+  const simple = {
+    actual: hashtags.custom(
+      {hash: '@'},
+      'Look! A `@user`!'
+    ),
+
+    expected: 'Look! A [`@user`](#user)!',
+  };
+
+  is.equal(simple.actual, simple.expected,
+    'in a simple case'
   );
 
-  const expected = 'Look! A [`@user`](#user)!';
+  const dot = {
+    actual: hashtags.custom(
+      {hash: '.'},
+      'Look! A `.class` and an `#id`!'
+    ),
 
-  is.equal(actual, expected,
-    'in a simple case'
+    expected: 'Look! A [`.class`](#class) and an `#id`!',
+  };
+
+  is.equal(dot.actual, dot.expected,
+    'when the hash is a dot'
   );
 
   is.end();
