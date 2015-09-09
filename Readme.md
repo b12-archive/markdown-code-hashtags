@@ -31,12 +31,12 @@ Helpful when writing docs in markdown.
 
 <p align="center"><a
   title="Graphic by the great Justin Mezzell"
-  href="http://justinmezzell.tumblr.com/post/95370140878"
+  href="http://justinmezzell.tumblr.com/post/93139322653"
   >
   <br/>
   <br/>
   <img
-    src="Readme/Scissors.gif"
+    src="Readme/Globe.gif"
     width="400"
     height="300"
   />
