@@ -72,8 +72,14 @@ hashtags(
   'Look! A `#hashtag`!'
 );
 //» 'Look! A [`#hashtag`](#hashtag)!'
+```
 
-hashtags.custom({hash: '@', swallow: true, urlBase: '/custom/'},
+You can also configure the thing:
+
+```js
+const hashtags = require('markdown-code-hashtags').custom;
+
+hashtags({hash: '@', swallow: true, urlBase: '/custom/'},
   'Got a different `@link` here.'
 );
 //» 'Got a different [`link`](/custom/link) here.'
