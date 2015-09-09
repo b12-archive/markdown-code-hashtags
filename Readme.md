@@ -59,8 +59,7 @@ $ npm install markdown-code-hashtags
 
 
 
-<div                                                    id="/usage">&nbsp;</div>
-<a                                                             id="hashtag"></a>
+<d                                  id="/usage"><a id="hashtag"></a>&nbsp;</div>
 
 Usage
 -----
@@ -84,6 +83,16 @@ hashtags({hash: '@', swallow: true, urlBase: '/custom/'},
 );
 //» 'Got a different [`link`](/custom/link) here.'
 ```
+
+
+
+
+<div                                                 id="/see-also">&nbsp;</div>
+
+See also
+--------
+
+* **[erase](http://npm.im/erase)** – Remove part of a markdown/HTML document.
 
 
 
